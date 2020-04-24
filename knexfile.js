@@ -18,10 +18,10 @@ module.exports = {
   production: {
     client: "pg",
     connection: {
-      host: "localhost", // if the server is not running on your computer provide the network address
-      database: "the name of the database to use in the postgres server", // <-- update
-      user: "a user that has access to the server and database", // <-- update
-      password: "the password for the user", // <-- update
+      host: process.env.DB_HOST, // if the server is not running on your computer provide the network address
+      database: process.env.DB_NAME, // <-- update
+      user: process.env.DB_USER, // <-- update
+      password: process.env.DB_PASSWORD, // <-- update
     },
     pool: {
       min: 2,
